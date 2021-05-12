@@ -1,0 +1,250 @@
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block;}
+body { line-height: 1;}
+ol,ul { list-style: none;}
+blockquote,q { quotes: none;}
+blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
+table { border-collapse: collapse; border-spacing: 0;}
+
+img {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+header > .left-side {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 0px 0px 0px 40px;
+  font-weight: bold;
+}
+
+header > .right-side {
+  display: flex;
+  gap: 5px;
+  padding: 0px 40px 0px 0px;
+}
+
+header > .middle-side > .logo {
+  width: 200px;
+  height: 30px;
+  object-fit: cover;
+  padding: 5px 0px 5px 0px;
+}
+
+header> .right-side {
+  display: flex;
+  align-items: center;
+}
+header > .right-side > button {
+  height: 30px;
+  background-color: #567B95;
+  border: 0px;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 48px;
+  padding: 65px 0px 30px 0px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}
+h2 {
+  font-weight: bold;
+}
+
+.grid-container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.article-content {
+  color: #333333;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 30px;
+  grid-template-columns: repeat(3, minmax(auto, 1fr)) repeat(4, minmax(150px, 1fr)) repeat(3, minmax(auto, 1fr));
+  display: grid;
+  grid-auto-rows: auto;
+  row-gap: 20px;
+}
+
+.article-content > * {
+  grid-column: 4/ 8;
+}
+
+.article-content > figure {
+  grid-column: 2 / 10;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.article-content > figure > figcaption {
+  font-size: 15px;
+  line-height: 20px;
+  color: #666666
+}
+.article-content > figure > figcaption > span {
+  font-size: 13px;
+  line-height: 18px;
+  color: #888888
+}
+
+.article-content > .telescope-image {
+  grid-column: 3 / 9;
+  padding: 0px 50px 0px 50px;
+}
+
+.article-content > .social-buttons {
+  display: flex;
+  gap: 20px;
+}
+.article-content > .social-buttons > .material-icons {
+  padding: 5px;
+}
+.article-content > .social-buttons > .material-icons:nth-child(-n+4) {
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+.nytimes-notes {
+  font-size: 15px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 0px 15px 0px;
+}
+.nytimes-notes > span {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.sign-up-ad {
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px 5px 10px 5px;
+  border-top: 1px solid rgb(238, 238, 238)
+}
+.sign-up-ad > strong {
+  font-weight: bold;
+}
+.sign-up-ad > button {
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: white;
+  font-weight: bold;
+  width: 80px;
+  height: 30px;
+}
+
+.nytimes-notes-subscribe {
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: bold;
+  grid-column: 5 / 7;
+  justify-self: center;
+  text-align: center;
+}
+.nytimes-notes-subscribe > div {
+  padding: 10px;
+}
+.nytimes-notes-subscribe > hr {
+  width: 70px;
+  color:rgb(238, 238, 238);
+}
+
+.images-grid {
+  display: grid;
+  grid-column: 2/ 10;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+  "title title title title"
+  "desc desc desc desc"
+  "item item item item"
+  "item item item item"
+  "by by by by";
+  row-gap: 10px;
+  column-gap: 20px;
+}
+.images-grid > h2 {
+  grid-area: title;
+}
+.images-grid > p {
+  grid-area: desc;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+
+}
+.images-grid > .author {
+  grid-area: by;
+}
+
+.image-explanation {
+  font-size: 15px;
+  line-height: 20px;
+}
+.image-explanation > h3 {
+  display: inline;
+  font-weight: bold;
+}
+.image-explanation > p {
+  display: inline;
+}
+.images-grid > .image-explanation > div {
+  height: 125px;
+  padding: 0px 0px 5px 0px;
+  overflow: hidden;
+}
+
+.images-grid > * img:nth-child(1) {
+  object-fit: cover;
+  object-position: 0% 0%;
+  background-size: 200px 200px;
+  height: 550px;
+}
+
+.images-grid > .author {
+  font-size: 16px;
+}
+.images-grid > .author > hr {
+  width: 100px;
+  margin: 1px 0px 0px 0px;
+}
+
+.comments-and-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comments-and-social > button {
+  width: 330px;
+  height: 40px;
+  background-color: #567B95;
+  color: white;
+  font-weight: bold;
+  border-radius: 2px;
+  border: 0px;
+}
+.comments-and-social > span {
+  display: flex;
+  gap: 10px;
+}
+.comments-and-social > span > span {
+  border-radius: 50%;
+  background-color: rgb(233, 233, 233);
+  padding: 5px;
+}
