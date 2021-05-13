@@ -56,6 +56,7 @@ h1 {
   line-height: 48px;
   padding: 65px 0px 30px 0px;
   border-bottom: 1px solid rgb(238, 238, 238);
+  text-align: start;
 }
 h2 {
   font-weight: bold;
@@ -72,6 +73,7 @@ h2 {
   font-weight: 500;
   text-align: justify;
   line-height: 30px;
+  padding: 0px 0px 50px 0px;
   grid-template-columns: repeat(3, minmax(auto, 1fr)) repeat(4, minmax(150px, 1fr)) repeat(3, minmax(auto, 1fr));
   display: grid;
   grid-auto-rows: auto;
@@ -248,3 +250,235 @@ h2 {
   background-color: rgb(233, 233, 233);
   padding: 5px;
 }
+
+.external-links {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+  "content news"
+  "content2 news"
+  "footer footer";
+  column-gap: 30px;
+}
+
+.suggested-newsletter {
+  grid-column: 1/2;
+  display: grid;
+  grid-area: content;
+  grid-auto-rows: min-content;
+  grid-template-areas: 
+  "title title button"
+  "item item item";
+  column-gap: 15px;
+  padding: 0px 0px 20px 0px;
+  border-top: 1px solid black;
+}
+.suggested-newsletter > h4 {
+  grid-area: title;
+  padding: 20px 0px 20px 0px;
+  font-weight: bold;
+}
+.suggested-newsletter > span {
+  grid-area: button;
+  align-self: center;
+  text-align: end;
+  color: rgb(141, 141, 141)
+}
+
+/*suggested item block*/
+.newsletter-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto 1fr auto;
+  border: 2px solid rgb(233, 233, 238);
+  padding: 10px;
+  grid-template-areas: 
+  "image     .     icon"
+  "timing  timing  timing"
+  "title   title   title"
+  "content content content"
+  "latest  latest  latest";
+  grid-auto-rows: min-content;
+}
+.newsletter-item > p{
+  grid-area: content;
+  padding: 0px 0px 10px 0px;
+}
+
+.newsletter-item > h5 {
+  grid-area: title;
+  padding: 0px 0px 10px 0px;
+  font-weight: bold;
+}
+
+.newsletter-item > .newsletter-timing {
+  grid-area: timing;
+  padding: 10px 0px 3px 0px;
+  font-size: 13px;
+}
+
+.newsletter-item > img {
+  grid-area: image;
+}
+
+.newsletter-item > .material-icons {
+  grid-area: icon;
+  justify-self: end;
+  font-size: 32px;
+}
+
+.newsletter-item > .newsletter-latest {
+  grid-area: latest;
+  font-weight: bold;
+}
+/*suggested item block*/
+
+.more-articles {
+  grid-area: content2;
+  display: grid;
+  column-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "content1 content1 content1"
+  "content2 content2 content2";
+}
+.more-articles > * h4 {
+  font-weight: bold;
+  padding: 20px 0px 20px 0px;
+  border-top: 1px solid black;
+  margin: 20px 0px 0px 0px;
+}
+.more-articles > * .item > figure {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+}
+.more-articles > * .item > figure > figcaption {
+  font-size: 13px;
+  color:rgb(141, 141, 141);
+  text-align: end;
+  padding: 4px 0px;
+}
+.more-articles > * .item > figure > .title {
+  font-weight: 600;
+}
+.more-articles > * .item > figure > .date {
+  font-size: 14px;
+  padding: 5px 0px;
+  color:rgb(141, 141, 141)
+}
+
+.space-and-astronomy {
+  grid-area: content1;
+  column-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: min-content;
+  grid-template-areas: 
+  "title title title"
+  "content content content";
+}
+.space-and-astronomy > h4 {
+  grid-area: title;
+}
+
+
+.editor-picks {
+  grid-area: content2;
+  display: grid;
+  column-gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+  "title title title"
+  "content content content";
+  grid-auto-rows: min-content;
+}
+.editor-picks > h4 {
+  grid-area: title;
+
+}
+
+.external-links > footer {
+  grid-area: footer;
+}
+.most-popular {
+  grid-area: news;
+}
+.most-popular > h4 {
+  font-weight: bold;
+  padding: 20px 0px;
+  border-top: 1px solid black;
+}
+.most-popular > .item {
+  font-size: 19px;
+  line-height: 23px;
+  padding: 20px 0px;
+  border-top: 1px solid rgb(204, 204, 204);
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) auto;
+  grid-template-areas: 
+  "title title title title title button"
+  "col   col   col   col   col   col"
+  "copy  copy  copy  copy  copy  copy";
+  border-top: 4px double rgb(228, 228, 228);
+  grid-gap: 20px 0px;
+}
+footer > img {
+  grid-area: title;
+  width: 200px;
+  height: 30px;
+  object-fit: cover;
+  padding: 15px 0px 0px 0px;
+}
+footer > span {
+  grid-area: button;
+  align-self: center;
+  text-align: end;
+  font-size: 13px;
+  color: rgb(141, 141, 141)
+}
+
+footer > .links-column > h3 {
+  font-weight: bold;
+  padding: 10px 0px;
+}
+
+footer > .links-column > div {
+  padding: 5px 0px;
+}
+
+footer > .copyright {
+  grid-area: copy;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  font-size: 13px;
+  padding: 20px 0px;
+  border-top: 1px solid rgb(204, 204, 204);
+  color:rgb(110, 110, 110);
+}
+
+footer > .subscribe {
+  border-left: 1px solid rgb(204, 204, 204);
+  padding: 0px 20px;
+  font-size: 13px;
+}
+footer > .subscribe > div:nth-child(5) {
+  border-bottom: 1px solid rgb(206, 206, 206);
+  margin-bottom: 15px;
+}
+
+footer > .subscribe > .big-links {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px 0px;
+}
+footer > .subscribe > .big-links > * .material-icons {
+  font-size: 15px;
+  margin-right: 2px;
+} 
