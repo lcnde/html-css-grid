@@ -417,6 +417,30 @@ h2 {
   border-top: 1px solid rgb(204, 204, 204);
 }
 
+.editors-pick {
+  grid-column: 9 / 11;
+  grid-row-start: 13;
+  grid-row-end: span 10;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: min-content;
+  row-gap: 20px;
+}
+.editors-pick > span:nth-child(1) {
+  grid-column: 1 / span 2;
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+.editors-pick > span:not(:first-child) {
+  font-size: 14px;
+  line-height: 17px;
+  padding-left: 10px;
+  text-align: left;
+}
+.editors-pick > * {
+  align-self: center;
+}
+
+
 footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr) auto;
